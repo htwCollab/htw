@@ -109,11 +109,97 @@
       <incoming>SequenceFlow_0tzueb3</incoming>
       <outgoing>SequenceFlow_04au6vs</outgoing>
     </scriptTask>
-    <startEvent id="sid-3EE5EF64-3144-4C8A-93C7-93E75CCB68C4" name="Bestellformular&#10;eingegangen" camunda:formKey="embedded:app:forms/startForm.html">
+    <startEvent id="sid-3EE5EF64-3144-4C8A-93C7-93E75CCB68C4" name="Bestellformular&#10;eingegangen">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff" />
         <signavio:signavioMetaData metaKey="vorgngerprozesse" metaValue="[]" />
         <signavio:signavioLabel bottom="false" left="false" ref="text_name" right="false" top="true" valign="bottom" x="16.0" y="-8.0" />
+        <camunda:formData>
+          <camunda:formField id="anrede" label="Anrede" type="enum">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+            <camunda:value id="m" name="Mann" />
+            <camunda:value id="w" name="Frau" />
+          </camunda:formField>
+          <camunda:formField id="name" label="Name" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="vorname" label="Vorname" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="artNr" label="Artikelnummer" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="preis" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="bestDatum" label="Bestelldatum" type="date">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="gebDatum" label="Geburtsdatum" type="date">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="email" label="E-Mail" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="strasse" label="Straße" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="hausnr" label="Hausnummer" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="plz" label="Postleitzahl" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="ort" label="Ort" type="string">
+            <camunda:validation>
+              <camunda:constraint name="requried" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="adressZusatz" label="Zusatz" />
+          <camunda:formField id="ktNr" label="Kontonummer" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="ktInh" label="Kontoinhaber" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="ktBlz" label="Bankleitzahl" type="string">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="express" label="Express-Versand" type="boolean" />
+          <camunda:formField id="agb" label="AGB-Bestätigung" type="boolean">
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+        </camunda:formData>
       </extensionElements>
       <outgoing>sid-199B0B95-EA7B-48EE-A292-29F83BC73785</outgoing>
       <dataOutput id="sid-061b5747-c1f4-4d85-83af-a967ac8bed3d" />
